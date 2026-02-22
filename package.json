@@ -1,0 +1,19 @@
+{
+  "name": "joplin-plugin-duplicate-finder",
+  "version": "1.0.0",
+  "description": "Find duplicate notes based on text similarity",
+  "scripts": {
+    "dist": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js"
+  },
+  "keywords": ["joplin-plugin"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@joplin/plugin-repo-cli": "^2.1.0",
+    "ts-loader": "^9.4.0",
+    "typescript": "^4.9.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}
