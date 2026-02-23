@@ -11,6 +11,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
+    alias: {
+      // Point 'api' and 'api/types' to our local stubs for TS resolution;
+      // webpack will then treat them as externals (see below).
+      'api/types': path.resolve(__dirname, 'api/types.d.ts'),
+    },
   },
   module: {
     rules: [
@@ -21,7 +26,9 @@ module.exports = {
       },
     ],
   },
+  // Tell webpack NOT to bundle these — Joplin injects them at runtime.
   externals: {
     api: 'api',
+    'api/types': 'api/types',
   },
 };

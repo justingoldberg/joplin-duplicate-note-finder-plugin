@@ -6,8 +6,13 @@
     "esModuleInterop": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "api": ["./api/index.d.ts"],
+      "api/types": ["./api/types.d.ts"]
+    }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "api/**/*"],
   "exclude": ["node_modules"]
 }
